@@ -12,7 +12,15 @@ def show_music(choice):
     with use_scope('Music', clear=True):
         if choice == "Показать музыку":
 
-
+            put_buttons(
+                ['Ольга Бузова & DAVA - Мандаринка!', 'King Crimson - Epitaph', 'Cigarettes After Sex - Apocalypse',
+                 'Frank Sinatra - Fly Me To The Moon', "Elvis Presley - Can't Help Falling In Love",
+                 'Alex Clare - Too Close',
+                 'Depeche Mode - Enjoy The Silence', 'Slowdive - altogether', 'Deftones - Sextape',
+                 'Альянс - На заре!', 'Lil peep - Star shopping', 'DJ Snake and Lil Jon - Turn Down For What',
+                 'Chase Atlantic - Swim', 'Laki bass - Deset Horse', 'Billie Eilish, Khalid - Lovely',
+                 'Gotye - Somebody that I used to know', 'Кис-кис - Мелочь', 'Hozier - Would that I',
+                 'The Weeknd (feat. Ed Sheeran) - Dark Times', 'Король и шут - Воспоминания о былой любви'], onclick=btn_click)
 
         if choice == "Скрыть музыку":
             clear('Music')
@@ -21,6 +29,46 @@ def btn_click(a):
     with use_scope('hobby', clear=True):
         put_text(f"Для вас играет: {a}")
 
+        if a == "Ольга Бузова & DAVA - Мандаринка!":
+            url = "https://moosic.my.mail.ru/file/04a18a20d10df0d8fdf0fc75de5ab285.mp3"
+        elif a == "King Crimson - Epitaph":
+            url = "https://moosic.my.mail.ru/file/bfeb583d7e9cee2741faf4b9dbfbe172.mp3"
+        elif a == "Cigarettes After Sex - Apocalypse":
+            url = "https://moosic.my.mail.ru/file/5cc1d3c447537e9480287dc30a9a773f.mp3"
+        elif a == "Frank Sinatra - Fly Me To The Moon":
+            url = "https://moosic.my.mail.ru/file/669c5b4d2f5409a2e4168bbad105d7cc.mp3"
+        elif a == "Elvis Presley - Can't Help Falling In Love":
+            url = "https://moosic.my.mail.ru/file/05811feb7583f71b42d74dd659428c39.mp3"
+        elif a == "Depeche Mode - Enjoy The Silence":
+            url = "https://moosic.my.mail.ru/file/01179e43e478e38e234213e6acb21a9a.mp3"
+        elif a == "Alex Clare - Too Close":
+            url = "https://moosic.my.mail.ru/file/fc5111d455346a0524f5ef662cf2116b.mp3"
+        elif a == "Slowdive - altogether":
+            url = "https://moosic.my.mail.ru/file/662350d39daadc1c0126f3514740f5a0.mp3"
+        elif a == "Deftones - Sextape":
+            url = "https://moosic.my.mail.ru/file/33c9d795aa363fd9071ef22c507959c9.mp3"
+        elif a == "Альянс - На заре!":
+            url = "https://moosic.my.mail.ru/file/6e43ce87382f3fdf23b1e46549875b6d.mp3"
+        elif a == "Lil peep - Star shopping":
+            url = "https://moosic.my.mail.ru/file/7a47d17c35e788b6f5422079f5b0a4f1.mp3"
+        elif a == "DJ Snake and Lil Jon - Turn Down For What":
+            url = "https://moosic.my.mail.ru/file/5d38f88f58c41a04f496479a5626f257.mp3"
+        elif a == "Chase Atlantic - Swim":
+            url = "https://moosic.my.mail.ru/file/7e5fecb577f00d3471c839c4a83f59b3.mp3"
+        elif a == "Laki bass - Deset Horse":
+            url = "https://moosic.my.mail.ru/file/261ecdde53187737bd346d54091bf99e.mp3"
+        elif a == "Billie Eilish, Khalid - Lovely":
+            url = "https://moosic.my.mail.ru/file/67d2f96bc9042240870d5eb2e4ed589a.mp3"
+        elif a == "Gotye - Somebody that I used to know":
+            url = "https://moosic.my.mail.ru/file/abd4d59f5a18e6edfca9dc0a1d07d6b6.mp3"
+        elif a == "Кис-кис - Мелочь":
+            url = "https://moosic.my.mail.ru/file/9bd5e31d4f3476d957a72d4aa641c8dd.mp3"
+        elif a == "Hozier - Would that I":
+            url = "https://moosic.my.mail.ru/file/798455c3545358b73e1293e207c4b774.mp3"
+        elif a == "The Weeknd (feat. Ed Sheeran) - Dark Times":
+            url = "https://moosic.my.mail.ru/file/abd14f8fb51b00bcc79611c87560cced.mp3"
+        elif a == "Король и шут - Воспоминания о былой любви":
+            url = "https://moosic.my.mail.ru/file/da2141c0ab0f32e13fb89fc7b3aa9ffa.mp3"
 
 
         put_audio(url)
@@ -105,4 +153,4 @@ async def refresh_msg(nickname, msg_box):
 
 
 if __name__ == "__main__":
-    start_server(main, debug=True, port=8080, cdn=False)
+    start_server(main, debug=True, port=9090, cdn=False)
