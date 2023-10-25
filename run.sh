@@ -1,4 +1,4 @@
-python wd.py & C:\\Users\\User\\Desktop\\ngrok.exe http 8080
+python wd.py & C:\Users\User\Desktop\ngrok.exe http 8080
 #Для корректной работы программы необходимо указать путь для
 #своего ngrok. Сама программа уже есть в репозитории. Полный
 #гайд по использованию run.sh приложу с коммитом.

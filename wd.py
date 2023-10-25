@@ -19,8 +19,9 @@ def show_music(choice):
                  'Depeche Mode - Enjoy The Silence', 'Slowdive - altogether', 'Deftones - Sextape',
                  'Альянс - На заре!', 'Lil peep - Star shopping', 'DJ Snake and Lil Jon - Turn Down For What',
                  'Chase Atlantic - Swim', 'Laki bass - Deset Horse', 'Billie Eilish, Khalid - Lovely',
-                 'Gotye - Somebody that I used to know', 'Кис-кис - Мелочь', 'Hozier - Would that I',
-                 'The Weeknd (feat. Ed Sheeran) - Dark Times', 'Король и шут - Воспоминания о былой любви'], onclick=btn_click)
+                 'Gotye - Somebody that I used to know', 'Кис-кис - Мелочь',
+                 'Hozier - Would that I', 'The Weeknd (feat. Ed Sheeran) - Dark Times',
+                 'Король и шут - Воспоминания о былой любви', 'Северный флот - Старый крысолов'], onclick=btn_click)
 
         if choice == "Скрыть музыку":
             clear('Music')
@@ -69,6 +70,8 @@ def btn_click(a):
             url = "https://moosic.my.mail.ru/file/abd14f8fb51b00bcc79611c87560cced.mp3"
         elif a == "Король и шут - Воспоминания о былой любви":
             url = "https://moosic.my.mail.ru/file/da2141c0ab0f32e13fb89fc7b3aa9ffa.mp3"
+        elif a == "Северный флот - Старый крысолов":
+            url = "https://moosic.my.mail.ru/file/34e8fdd8416e970ea2caf7bcb7fc212c.mp3"
 
 
         put_audio(url)
